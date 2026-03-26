@@ -20,8 +20,14 @@
 - Einstellbare Felgröße, Geschwindkeit und Knochen
 
 ## Installation
-1. Lade dir die ZIP "Setup" [hier]() herunter
-2. 
+1. Lade dir die ZIP "Setup" [hier](https://github.com/devMatrix0815/thedog/blob/master/Setup.zip) herunter
+2. Rechtsklicke die Datei und wähle "Alle Extrahieren"
+3. Wähle Extrahieren
+4. Öffne die datei setup.exe in Setup/app.publish
+5. klicke auf Installieren
+6. Bis zur Installation "weiter" klicken
+
+> Möglicherweise könnte ihr Antivirenprogramm die Datei als schädlich identifizieren. Klicken sie auf "Weiter Informationen", dann "Trodtzdem ausführen".
 
 ## Steuerung
 1. W - hoch
