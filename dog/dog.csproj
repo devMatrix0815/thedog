@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>ico.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="assets\figure\arrow_back.png" />
+    <None Remove="assets\figure\back.png" />
+    <None Remove="assets\figure\banner.png" />
+    <None Remove="assets\figure\body.png" />
+    <None Remove="assets\figure\body_curve.png" />
+    <None Remove="assets\figure\bone.png" />
+    <None Remove="assets\figure\head.png" />
+    <None Remove="assets\figure\play.png" />
+    <None Remove="assets\figure\settings.png" />
+    <None Remove="assets\img\banner.png" />
+    <None Remove="assets\img\bone.png" />
+    <None Remove="assets\img\trophe.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ico.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="assets\icons\arrow_back.png" />
+    <Resource Include="assets\figure\back.png" />
+    <Resource Include="assets\figure\body.png" />
+    <Resource Include="assets\figure\body_curve.png" />
+    <Resource Include="assets\figure\head.png" />
+    <Resource Include="assets\icons\play.png" />
+    <Resource Include="assets\icons\settings.png" />
+    <Resource Include="assets\img\banner.png" />
+    <Resource Include="assets\img\bone.png" />
+    <Resource Include="assets\img\trophe.png" />
+  </ItemGroup>
+
+</Project>
