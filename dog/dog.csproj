@@ -22,9 +22,13 @@
     <None Remove="assets\img\banner.png" />
     <None Remove="assets\img\bone.png" />
     <None Remove="assets\img\trophe.png" />
+    <None Remove="highscore.json" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="highscore.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
     <Content Include="ico.ico" />
   </ItemGroup>
 

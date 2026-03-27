@@ -1,15 +1,25 @@
 ﻿// Importing namespaces and libraries for WPF application development
+using System.IO;
+using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace dog
 {
+    public class Highscore
+    {
+        public int Age { get; set; }
+    }
+
     public partial class MainWindow : Window
     {
+        string path;
+
         // menu variables
         bool isInSettings = false;
         int interval = 200;
@@ -17,6 +27,7 @@ namespace dog
         int bones = 1;
 
         // dog variables
+        int highscore;
         int points = 0;
         Image? dogHead;
         int headRow = 5;
@@ -44,6 +55,18 @@ namespace dog
         // constructor
         public MainWindow()
         {
+            // read highscore from json file
+            path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "highscore.json");
+
+            if (!File.Exists(path))
+            {
+                File.WriteAllText(path, "0");
+            }
+
+            string json = File.ReadAllText(path);
+            highscore = JsonSerializer.Deserialize<int>(json);
+
+
             InitializeComponent();
             buildGamefield();
         }
@@ -327,6 +350,10 @@ namespace dog
         // method to build the game field based on user input
         private void buildGamefield()
         {
+            // set highscore
+            highscoreText.Text = highscore.ToString();
+
+
             // clear previous grid
             GameGrid.Children.Clear();
             GameGrid.RowDefinitions.Clear();
@@ -507,12 +534,23 @@ namespace dog
             int idx = bonePositions.FindIndex(p => p.X == headRow && p.Y == headCol);
             if (idx >= 0)
             {
+                // remove bone from grid and lists
                 GameGrid.Children.Remove(boneImages[idx]);
                 boneImages.RemoveAt(idx);
                 bonePositions.RemoveAt(idx);
 
+                // points & highscore
                 points++;
                 PointsText.Text = points.ToString();
+                if (points > highscore)
+                {
+                    highscore = points;
+
+                    string newHighscore = JsonSerializer.Serialize(highscore);
+                    File.WriteAllText(path, newHighscore);
+
+                    highscoreText.Text = highscore.ToString();
+                }
 
                 bonePositioned = false;
             }

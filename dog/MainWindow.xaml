@@ -91,7 +91,8 @@
                                 Height="128"/>
 
                             <TextBlock 
-                                Text="soon" 
+                                x:Name="highscoreText"
+                                Text="0" 
                                 TextAlignment="Center" 
                                 FontSize="24"
                                 Foreground="White"
@@ -125,7 +126,7 @@
 
                             <!--Text-->
                             <Border Grid.Column="1">
-                                <TextBlock Text="Spielen" 
+                                <TextBlock Text="Play" 
                                            TextAlignment="Center" 
                                            FontSize="22" 
                                            FontWeight="DemiBold" 
@@ -168,7 +169,7 @@
 
                             <!--Text-->
                             <Border Grid.Column="1">
-                                <TextBlock Text="Einstellungen" 
+                                <TextBlock Text="Settings" 
                                            TextAlignment="Center" 
                                            FontSize="22" 
                                            FontWeight="DemiBold" 
@@ -230,7 +231,7 @@
 
                         <!--Text-->
                         <TextBlock Grid.Column="1" 
-                                   Text="Einstellungen" 
+                                   Text="Settings" 
                                    FontSize="26" 
                                    FontWeight="DemiBold" 
                                    Foreground="White" 
@@ -250,7 +251,7 @@
                     <!--Stack-->
                     <StackPanel Margin="16,10,16,10">
                         <!--title-->
-                        <TextBlock Text="Geschwindigkeit(SPS):" 
+                        <TextBlock Text="Speed(SPS):" 
                                    FontSize="16" 
                                    FontWeight="Bold" 
                                    Foreground="White" 
@@ -361,7 +362,7 @@
                     <!--Stack-->
                     <StackPanel Margin="16,10,16,10">
                         <!--title-->
-                        <TextBlock Text="Feldgröße:" 
+                        <TextBlock Text="Fieldsize:" 
                                    FontSize="16" 
                                    FontWeight="Bold" 
                                    Foreground="White" 
@@ -472,7 +473,7 @@
                     <!--Stack-->
                     <StackPanel Margin="16,10,16,10">
                         <!--title-->
-                        <TextBlock Text="Knochenanzahl:" 
+                        <TextBlock Text="Bone count:" 
                                    FontSize="16" 
                                    FontWeight="Bold" 
                                    Foreground="White" 
