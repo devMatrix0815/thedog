@@ -23,7 +23,7 @@
 1. Lade dir die ZIP "Setup" [hier](https://github.com/devMatrix0815/thedog/blob/master/Setup.zip) herunter
 2. Rechtsklicke die Datei und wähle "Alle Extrahieren"
 3. Wähle Extrahieren
-4. Öffne die datei setup.exe in Setup/app.publish
+4. Öffne die datei setup.exe in Setup/Setup
 5. klicke auf Installieren
 6. Bis zur Installation "weiter" klicken
 
